@@ -1,13 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Ticket</title>
   <link rel="stylesheet" href="style.css">
+  <!-- tailwindcss and daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body>
+  <!-- navbar section -->
+  <nav>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-2xl font-bold">P-Ticket</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Destination</a></li>
+          <li><a>Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn bg-[#1DD1004D] text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header section  -->
+  <header>
+    <div class="hero min-h-screen"
+      style="background-image: url(images/banner.png)">
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <span class="text-[#1DD100]">P Paribahan</span> </h1>
+          <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+          <button class="btn bg-[#1DD100] text-black border-none">Buy Ticket</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- main section -->
+  <main>
+    <!-- cupon section -->
+    <section>
+      <h1 class="text-2xl font-bold text-center mt-14 mb-11">Best offers for you</h1>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
+        <div class="card card-side bg-[#FFBF0F]">
+          <div class="card-body">
+            <h2 class="card-title font-extrabold">15% OFF</h2>
+            <p class="font-bold">on your next purchase</p>
+              <p>use by January 2024</p>
+          </div>
+          <div>
+            <figure>
+              <div  class="justify-center items-center text-center lg:pt-8">
+                <h1 class="text-2xl font-bold">NEW15</h1> 
+                <p>Coupon Code</p>
+              </div>
+            </figure>
+          </div>
+
+        </div>
+        <!-- cupon section 2 -->
+        <div class="card card-side bg-[#F78C9C]">
+          <div class="card-body">
+            <h2 class="card-title font-extrabold">20% OFF</h2>
+            <p class="font-bold">on your next purchase</p>
+              <p>use by January 2024</p>
+          </div>
+          <figure>
+            <div class="justify-center items-center text-center lg:pt-8">
+              <h1 class="text-2xl font-bold">Couple 20</h1>
+              <p>Coupon Code</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <button class="btn btn-outline btn-success">See All Offers</button>
+      </div>
+    </section>
+    <!-- P.H Paribahan section -->
+    <section>
+      <h1 class="text-3xl font-bold text-center mt-14 mb-11">P.H Paribahan</h1>
+      <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+    </section>
+
+  </main>
 
   <script src="js/index.js"></script>
 </body>
+
 </html>
