@@ -1,34 +1,46 @@
-function getRendomAlphabet() {
-  const alphabets = ["A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4"];
-  console.log(alphabets);
-
-  const randomNumber = Math.random() * 8;
-  const index = Math.round(randomNumber);
-  const alphabet = alphabets[index];
-  console.log(alphabet);
-  // return alphabet;
-}
-
-
-function setBackgroundColorById(elementId) {
-  const element = document.getElementById(elementId);
-  element.classList.add('bg-orange-400');
-}
-
-function removeBackgroundColorById(elementId) {
-  const element = document.getElementById(elementId);
-  element.classList.remove('bg-orange-400');
-}
-
-
-
-
-
+var count = 0;
 function play() {
+
+  var x;
+  if (x === 1) {
+    count = count + 1;
+  } if (count === 1) {
+    document.getElementById('change-color').style.background = '#1DD100';
+  }
+
+
+  const currentNameElement = document.getElementById('current-name');
+  const currentName = currentNameElement.innerText;
+  const expectedName = currentName.toLowerCase();
+  console.log(expectedName);
+
+  const currentSeatElement = document.getElementById('current-Seat');
+  const currentSeatText = currentSeatElement.innerText;
+  const currentSeat = parseFloat(currentSeatText);
+  console.log(currentSeat);
+
+  const newSeat = currentSeat + 1
+
+  currentSeatElement.innerText = newSeat;
+
+
+  const minasScoreElement = document.getElementById('minas-score');
+  const minasScoreText = minasScoreElement.innerText;
+  const minasScore = parseFloat(minasScoreText);
+  console.log(minasScore);
+
+  const newMinasScore = minasScore - 1
+
+  minasScoreElement.innerText = newMinasScore;
+
+}
+
+
+function next() {
   const seatSection = document.getElementById('seat-section');
   seatSection.classList.add('hidden');
 
   const successSetion = document.getElementById('success-setion');
   successSetion.classList.remove('hidden');
-  console.log('play Now pro');
+  console.log('next New pro');
 }

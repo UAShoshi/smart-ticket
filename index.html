@@ -123,7 +123,7 @@
           </div>
         </div>
         <div class="mt-20">
-          <a class="btn bg-[#1DD1004D] text-[#1DD100]"><img src="images/seat-green.png" alt=""> 40 Seats left </a>
+          <a class="btn bg-[#1DD1004D] text-[#1DD100]"><img src="images/seat-green.png" alt=""> <span id="minas-score">8</span> Seats left </a>
         </div>
       </div>
       <!-- disrtic section -->
@@ -180,15 +180,15 @@
           <div class="card-actions justify-end mt-6 mb-5">
             <button class="btn bg-gray-300 "><img src="images/wheel.svg" alt=""></button>
           </div>
-          <div class="grid grid-cols-4 gap-10">
-            <kbd id="A1" class="kbd">A1</kbd>
-            <kbd id="A2" class="kbd">A2</kbd>
-            <kbd id="A3" class="kbd">A3</kbd>
-            <kbd id="A4" class="kbd">A4</kbd>
-            <kbd id="B1" class="kbd">B1</kbd>
-            <kbd id="B2" class="kbd">B2</kbd>
-            <kbd id="B3" class="kbd">B3</kbd>
-            <kbd id="B4" class="kbd">B4</kbd>
+          <div id="change-color" onclick="play(1)" class="grid grid-cols-4 gap-10">
+          <button id="A1" class="btn">A1</button>
+          <button id="A2" class="btn">A2</button>
+          <button id="A3" class="btn">A3</button>
+          <button id="A4" class="btn">A4</button>
+          <button id="B1" class="btn">B1</button>
+          <button id="B2" class="btn">B2</button>
+          <button id="B3" class="btn">B3</button>
+          <button id="B4" class="btn">B4</button>
           </div>
         </div>
         <div>
@@ -199,12 +199,12 @@
                 <!-- head -->
                 <thead>
                   <tr>
-                    <th class="font-semibold text-xl text-black">Seat <span class="bg-green-500 text-white rounded-lg">0</span></th>
+                    <th class="font-semibold text-xl text-black">Seat <span class="bg-green-500 text-white rounded-lg" id="current-Seat">0</span></th>
                     <th class="font-semibold text-xl text-black">Class</th>
                     <th class="font-semibold text-xl text-black">Price</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="current-name">
                   <!-- row 1 -->
                   <tr>
                     <td>C2</td>
@@ -228,7 +228,7 @@
             </div>
             <div class="flex justify-between font-semibold">
               <h2>Total Price</h2>
-              <h2>BDT 1100</h2>
+              <h2>BDT <span id="current-totle">0</span> </h2>
             </div>
             <div>
               <div class="mt-6">
@@ -236,7 +236,7 @@
               </div>
               <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
             </div>
-            <div><button onclick="play()" class="btn btn-success text-white w-full mt-4">Next</button></div>
+            <div><button onclick="next()" class="btn btn-success text-white w-full mt-4">Next</button></div>
           </div>
         </div>
       </div>
